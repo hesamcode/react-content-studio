@@ -1,1 +1,93 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-500: #0F766E;
+  --color-accent-500: #38BDF8;
+
+  --color-bg-light: #FAFAFA;
+  --color-surface-light: #FFFFFF;
+  --color-text-light: #111827;
+
+  --color-bg-dark: #0F172A;
+  --color-surface-dark: #111827;
+  --color-text-dark: #E5E7EB;
+}
+
+:root {
+  --app-bg: var(--color-bg-light);
+  --app-surface: var(--color-surface-light);
+  --app-surface-muted: #F1F5F9;
+  --app-surface-subtle: #F8FAFC;
+  --app-text: var(--color-text-light);
+  --app-text-muted: #475569;
+  --app-border: #CBD5E1;
+  --app-border-strong: #94A3B8;
+  --app-overlay: rgba(15, 23, 42, 0.5);
+}
+
+html.dark {
+  --app-bg: var(--color-bg-dark);
+  --app-surface: var(--color-surface-dark);
+  --app-surface-muted: #1E293B;
+  --app-surface-subtle: #0B1220;
+  --app-text: var(--color-text-dark);
+  --app-text-muted: #94A3B8;
+  --app-border: #334155;
+  --app-border-strong: #475569;
+  --app-overlay: rgba(2, 6, 23, 0.65);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--app-bg);
+  color: var(--app-text);
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+.studio-surface {
+  background-color: var(--app-surface);
+  border-color: var(--app-border);
+}
+
+.studio-muted-surface {
+  background-color: var(--app-surface-muted);
+  border-color: var(--app-border);
+}
+
+.studio-subtle-surface {
+  background-color: var(--app-surface-subtle);
+  border-color: var(--app-border);
+}
+
+.studio-border {
+  border-color: var(--app-border);
+}
+
+.studio-border-strong {
+  border-color: var(--app-border-strong);
+}
+
+.studio-text-muted {
+  color: var(--app-text-muted);
+}
+
+.studio-overlay {
+  background-color: var(--app-overlay);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-500);
+  outline-offset: 2px;
+}
