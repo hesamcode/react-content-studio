@@ -8,13 +8,13 @@ export default function AboutPage() {
       <p className="studio-text-muted mt-4 text-base">
         Built by{" "}
         <a
-          href="https://hesamkhorshidi.github.io"
+          href="https://hesamcode.github.io"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit Hesam Khorshidi portfolio website"
+          aria-label="Visit HesamCode portfolio website"
           className="font-semibold text-primary-500 hover:underline"
         >
-          Hesam Khorshidi
+          HesamCode
         </a>
       </p>
     </section>
